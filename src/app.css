@@ -1,0 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--width: 40rem;
+}
+
+body[data-theme="dark"] {
+	--background-color: #111;
+	--font-color: white;
+	--card-color: #222;
+	--input-color: #444;
+}
+
+body[data-theme="light"] {
+	--background-color: white;
+	--font-color: #222;
+	--card-color: #d6e5ee;
+	--input-color: #bdf4c9;
+}
+
+body[data-theme="pink"] {
+	--background-color: #5a0d5a;
+	--font-color: #e5c5e1;
+	--card-color: #8f488f;
+	--input-color: #3b0d5a;
+}
+
+body[data-rounded="true"] {
+	--radius: 0.25rem;
+}
+
+body[data-rounded="false"] {
+	--radius: 0rem;
+}
+
+body {
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	background-color: var(--background-color);
+	color: var(--font-color);
+}
+
+h1,
+h2 {
+	font-weight: 400;
+}
+
+select,
+option,
+input,
+button {
+	font-family: inherit;
+	color: inherit;
+	font-size: inherit;
+	outline: none;
+	background: none;
+	border: none;
+}
+
+.select {
+	background-color: var(--input-color);
+	padding: 0.2rem 0.4rem;
+	border-radius: var(--radius);
+}
+
+.select:focus-visible {
+	outline-offset: 0.2rem;
+	outline: 0.15rem solid var(--font-color);
+}
+
+input[type="checkbox"] {
+	accent-color: var(--input-color);
+}
+
+input[type="checkbox"]:focus-visible {
+	outline: 0.15rem solid var(--font-color);
+}
+
+.input {
+	background-color: var(--input-color);
+	padding: 0.4rem;
+	border-radius: var(--radius);
+}
+
+.button {
+	background-color: var(--input-color);
+	padding: 0.6rem 0.8rem;
+	cursor: pointer;
+	border-radius: var(--radius);
+}
+
+.button:focus-visible {
+	outline-offset: 0.2rem;
+	outline: 0.15rem solid var(--font-color);
+}
